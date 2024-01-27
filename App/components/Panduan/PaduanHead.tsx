@@ -1,6 +1,5 @@
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text } from "react-native";
 import React from "react";
-import { MaterialIcons } from "@expo/vector-icons";
 
 export default function PanduanHead() {
   return (
@@ -17,7 +16,6 @@ export default function PanduanHead() {
       <Text
         style={{
           fontSize: 30,
-          backgroundColor: "red",
           fontFamily: "LilitaOne-Regular",
           color: "white",
         }}

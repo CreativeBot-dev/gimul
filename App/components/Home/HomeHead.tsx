@@ -1,8 +1,14 @@
 import { View, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import { MaterialIcons } from "@expo/vector-icons";
+import { useNavigation } from "@react-navigation/native";
 
 export default function HomeHead() {
+  const Navigation = useNavigation();
+
+  function goToProfile() {
+    Navigation.navigate("Profile" as never);
+  }
   return (
     <View
       style={{
@@ -22,7 +28,7 @@ export default function HomeHead() {
         BESTI
         <Text style={{ fontWeight: "500" }}> GIMUL</Text>
       </Text>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={goToProfile}>
         <MaterialIcons name="person" size={30} color="white" />
       </TouchableOpacity>
     </View>

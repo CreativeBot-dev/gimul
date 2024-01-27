@@ -23,7 +23,7 @@ const GradientLayout: React.FC<LayoutProps> = (props: LayoutProps) => {
       colors={[gradientProps.startColor, gradientProps.endColor]}
       style={[{ height: "100%", paddingHorizontal: 20 }, motherStyle]}
     >
-      <View style={[{ paddingTop: statusBarHeight }, childStyle]}>
+      <View style={[{ paddingTop: statusBarHeight + 5 }, childStyle]}>
         {children}
       </View>
     </LinearGradient>

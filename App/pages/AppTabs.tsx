@@ -1,7 +1,7 @@
 import { View, Text } from "react-native";
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { APP_TABS } from "../Constants/APP_TABS";
+import { APP_TABS } from "../constants/APP_TABS";
 
 export default function AppTabs() {
   const Tab = createBottomTabNavigator();

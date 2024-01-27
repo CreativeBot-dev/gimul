@@ -1,10 +1,11 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { StatusBar } from "expo-status-bar";
 import { View } from "react-native";
-
 import { NavigationContainer } from "@react-navigation/native";
 import AppTabs from "./App/pages/AppTabs";
 import { useFonts } from "expo-font";
+import NewUser from "./App/pages/NewUser";
+import Profile from "./App/pages/Profile";
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -27,6 +28,12 @@ export default function App() {
             component={AppTabs}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="newUser"
+            component={NewUser}
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen name="Profile" component={Profile} />
         </Stack.Navigator>
       </NavigationContainer>
     </View>
