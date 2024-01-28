@@ -8,7 +8,6 @@ export default function PanduanHead() {
         width: "100%",
         flexDirection: "column",
         alignItems: "center",
-        backgroundColor: "pink",
         justifyContent: "center",
         paddingTop: 20,
       }}
@@ -20,7 +19,17 @@ export default function PanduanHead() {
           color: "white",
         }}
       >
-        BESTI
+        PANDUAN
+      </Text>
+      <Text
+        style={{
+          fontSize: 30,
+          fontFamily: "LilitaOne-Regular",
+          color: "white",
+          textAlign: "center",
+        }}
+      >
+        Membersihkan Gigi dan Rongga Mulut Balita
       </Text>
     </View>
   );

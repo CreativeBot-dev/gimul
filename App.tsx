@@ -6,6 +6,8 @@ import AppTabs from "./App/pages/AppTabs";
 import { useFonts } from "expo-font";
 import NewUser from "./App/pages/NewUser";
 import Profile from "./App/pages/Profile";
+import { STACK_SCREEN } from "./App/constants/STACK_SCREEN";
+import { Ionicons } from "@expo/vector-icons";
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -24,16 +26,31 @@ export default function App() {
       <NavigationContainer>
         <Stack.Navigator initialRouteName="App">
           <Stack.Screen
-            name="App"
+            name="AppTabs"
             component={AppTabs}
             options={{ headerShown: false }}
           />
+          <Stack.Screen name="Profile" component={Profile} />
           <Stack.Screen
             name="newUser"
             component={NewUser}
             options={{ headerShown: false }}
           />
-          <Stack.Screen name="Profile" component={Profile} />
+
+          {STACK_SCREEN.map((data, idx) => (
+            <Stack.Screen
+              key={idx}
+              name={data.name}
+              component={data.component}
+              options={{
+                headerTitleStyle: { display: "none" },
+                headerTransparent: true,
+                headerBackImage: () => (
+                  <Ionicons name="arrow-back-outline" size={35} color="white" />
+                ),
+              }}
+            />
+          ))}
         </Stack.Navigator>
       </NavigationContainer>
     </View>

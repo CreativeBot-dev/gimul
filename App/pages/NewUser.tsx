@@ -23,7 +23,6 @@ export default function NewUser() {
     setUserName(value);
   }
 
-  console.log(userName);
   return (
     <Layout
       motherStyle={{ backgroundColor: "#FFF0F5" }}
@@ -38,7 +37,7 @@ export default function NewUser() {
         placeholder="masukkan nama"
         onChange={handleTextInput}
         onSubmit={handleSubmit}
-        style={{ backgroundColor: "white" }}
+        style={{ backgroundColor: "white", elevation: 4 }}
       />
     </Layout>
   );

@@ -57,6 +57,7 @@ export default function Profile() {
             justifyContent: "space-around",
             height: "100%",
             display: isEdit ? "none" : "flex",
+            elevation: 4,
           }}
         >
           <Text style={{ textAlign: "center", fontSize: 25 }}>Nama :</Text>
