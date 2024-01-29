@@ -26,7 +26,7 @@ export default function AppButton(props: IButton) {
         style={[
           fontStyle,
           {
-            fontSize: 18,
+            fontSize: 15,
             textAlign: "center",
             fontFamily: "Poppins-SemiBold",
           },

@@ -1,30 +1,17 @@
-import { TextStyle, View, ViewStyle } from "react-native";
+import { TextStyle, View } from "react-native";
 import React from "react";
 import AppButton from "./AppButton";
 
 interface IButton {
   Rname: string;
   RonPress: () => void;
-  RfontStyle?: TextStyle;
-  RbtnStyle?: ViewStyle;
-
   Lname: string;
   LonPress: () => void;
-  LfontStyle?: TextStyle;
-  LbtnStyle?: ViewStyle;
+  fontStyle?: TextStyle;
 }
 
 export default function DualButton(props: IButton) {
-  const {
-    Rname,
-    RonPress,
-    RfontStyle,
-    RbtnStyle,
-    Lname,
-    LonPress,
-    LbtnStyle,
-    LfontStyle,
-  } = props;
+  const { Rname, RonPress, fontStyle, Lname, LonPress } = props;
   return (
     <View
       style={{
@@ -38,39 +25,15 @@ export default function DualButton(props: IButton) {
       <AppButton
         onPress={LonPress}
         name={Lname}
-        BtnStyle={LbtnStyle}
-        fontStyle={LfontStyle}
+        BtnStyle={{ backgroundColor: "#FBA1B7", width: 160 }}
+        fontStyle={fontStyle}
       />
       <AppButton
         onPress={RonPress}
         name={Rname}
-        BtnStyle={RbtnStyle}
-        fontStyle={RfontStyle}
+        BtnStyle={{ backgroundColor: "#FFC5C5", width: 160 }}
+        fontStyle={fontStyle}
       />
     </View>
-    // <TouchableOpacity
-    //   onPress={onPress}
-    //   style={[
-    //     BtnStyle,
-    //     {
-    //       paddingVertical: 4,
-    //       borderRadius: 10,
-    //       elevation: 4,
-    //     },
-    //   ]}
-    // >
-    //   <Text
-    //     style={[
-    //       fontStyle,
-    //       {
-    //         fontSize: 18,
-    //         textAlign: "center",
-    //         fontFamily: "Poppins-SemiBold",
-    //       },
-    //     ]}
-    //   >
-    //     {name}
-    //   </Text>
-    // </TouchableOpacity>
   );
 }

@@ -9,14 +9,12 @@ export default function NewUser() {
   const { setUser } = useUser();
   const [userName, setUserName] = useState("");
 
-  console.log(userName);
-
   const Navigation = useNavigation();
 
   function handleSubmit() {
     setUser(userName);
     Keyboard.dismiss();
-    Navigation.navigate("App" as never);
+    Navigation.navigate("AppTabs" as never);
   }
 
   function handleTextInput(value: string) {

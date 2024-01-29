@@ -19,3 +19,13 @@ export const useReminderSikat = create<ISikatGigi>((set) => ({
   sikatGigi: 0,
   setSikatGigi: (setDataSikat: number) => set({ sikatGigi: setDataSikat }),
 }));
+
+interface IDentist {
+  Dentist: boolean;
+  setDentist: (setToDentist: boolean) => void;
+}
+
+export const useDentist = create<IDentist>((set) => ({
+  Dentist: true,
+  setDentist: (setToDentist: boolean) => set({ Dentist: setToDentist }),
+}));

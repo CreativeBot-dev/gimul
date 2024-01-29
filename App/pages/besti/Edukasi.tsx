@@ -1,8 +1,8 @@
 import { Text } from "react-native";
 import React from "react";
-import LayoutV2 from "../../../components/Layout/LayoutV2";
-import FeatureHead from "../../../components/FeatureHead";
-import AppScrollView from "../../../components/AppScrollView";
+import LayoutV2 from "../../components/Layout/LayoutV2";
+import FeatureHead from "../../components/FeatureHead";
+import AppScrollView from "../../components/AppScrollView";
 
 export default function Edukasi() {
   return (

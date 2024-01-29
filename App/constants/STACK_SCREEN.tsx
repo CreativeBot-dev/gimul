@@ -1,11 +1,11 @@
 import PanduanOne from "../pages/Panduan/PanduanOne";
 import PanduanThree from "../pages/Panduan/PanduanThree";
 import PanduanTwo from "../pages/Panduan/PanduanTwo";
-import Edukasi from "../pages/besti/Edukasi/Edukasi";
+import Edukasi from "../pages/besti/Edukasi";
 import Keluhan from "../pages/besti/Keluhan";
-import RemindDokterGigi from "../pages/besti/ReminderDokterGigi/RemindDokterGigi";
-import RemindSikatGigi from "../pages/besti/ReminderSikatGigi/RemindSikatGigi";
-import VideoEdukasi from "../pages/besti/VideoEdukasi/VideoEdukasi";
+import RemindDokterGigi from "../pages/besti/RemindDokterGigi";
+import RemindSikatGigi from "../pages/besti/RemindSikatGigi";
+import VideoEdukasi from "../pages/besti/VideoEdukasi";
 
 export const STACK_SCREEN = [
   {

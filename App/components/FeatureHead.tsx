@@ -30,6 +30,7 @@ export default function FeatureHead(props: IHeader) {
                 textStyle,
                 {
                   textAlign: "center",
+                  // fontFamily: "Poppins-SemiBold",
                 },
               ]
         }
@@ -39,9 +40,3 @@ export default function FeatureHead(props: IHeader) {
     </View>
   );
 }
-// {
-//           fontSize: 30,
-//           fontFamily: "LilitaOne-Regular",
-//           color: "white",
-//           textAlign: "center",
-//         }
