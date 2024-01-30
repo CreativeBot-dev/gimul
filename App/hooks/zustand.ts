@@ -29,3 +29,13 @@ export const useDentist = create<IDentist>((set) => ({
   Dentist: true,
   setDentist: (setToDentist: boolean) => set({ Dentist: setToDentist }),
 }));
+
+interface IPanduanPage {
+  activePage: string;
+  setActivePage: (setActive: string) => void;
+}
+
+export const usePanduanPage = create<IPanduanPage>((set) => ({
+  activePage: "PanduanOne",
+  setActivePage: (setActive: string) => set({ activePage: setActive }),
+}));
