@@ -38,7 +38,7 @@ export default function RemindDokterGigi() {
   }
   return (
     <LayoutV2 motherStyle={{ backgroundColor: "#FBA1B7" }}>
-      <FeatureHead name="Usia 0 - 3 Tahun" />
+      <FeatureHead name="Reminder Dokter Gigi" />
       <AppScrollView style={{ marginTop: 20, padding: 15 }}>
         <FeatureHead
           name="Apakah Anak Anda Sudah Pernah Periksa Gigi ??"

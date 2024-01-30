@@ -22,7 +22,11 @@ export default function ToDentist(props: IProps) {
       <Text style={{ fontSize: 15, textAlign: "center" }}>
         Yuk Periksa Gigimu Sekarang
       </Text>
-      <AppButton name="Saya Sudah Periksa Gigi" onPress={onPress} />
+      <AppButton
+        name="Saya Sudah Periksa Gigi"
+        onPress={onPress}
+        BtnStyle={{ backgroundColor: "#FBA1B7", margin: 25 }}
+      />
     </View>
   );
 }
