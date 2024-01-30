@@ -2,14 +2,20 @@ import { Text, TouchableOpacity, View } from "react-native";
 import React from "react";
 import { PANDUAN_MENU } from "../../constants/PANDUAN";
 import { useNavigation } from "@react-navigation/native";
+import { usePanduanPage } from "../../hooks/zustand";
 
 export default function PanduanMenuBtn() {
   const Navigation = useNavigation();
+  const { activePage, setActivePage } = usePanduanPage();
+  console.log(activePage);
   return (
     <View style={{ gap: 10 }}>
       {PANDUAN_MENU.map((data, idx) => (
         <TouchableOpacity
-          onPress={() => Navigation.navigate(`${data.page}` as never)}
+          onPress={() => {
+            setActivePage(`${data.page}`);
+            Navigation.navigate("PanduanDetail" as never);
+          }}
           key={idx}
           style={{
             width: "100%",

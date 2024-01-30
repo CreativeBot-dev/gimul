@@ -10,11 +10,20 @@ interface IProps {
 export default function AppULText(props: IProps) {
   const { title, data } = props;
   return (
-    <View style={{ flexDirection: "row", alignItems: "center", gap: 5 }}>
+    <View style={{ flexDirection: "row", alignItems: "flex-start", gap: 5 }}>
       <Octicons name="dot" size={20} color="black" />
-      <Text style={{ fontFamily: "Poppins-SemiBold" }}>
-        {title + ":"}
-        <Text style={{ fontFamily: "Poppins-Regular" }}>{data}</Text>
+      <Text style={{ fontFamily: "Poppins-SemiBold", width: "20%" }}>
+        {title}
+      </Text>
+      <Text
+        style={{
+          fontFamily: "Poppins-Regular",
+          flexWrap: "wrap",
+          width: "75%",
+          textAlign: "justify",
+        }}
+      >
+        : {data}
       </Text>
     </View>
   );
