@@ -5,7 +5,6 @@ interface IAlat {
 interface IVideo {
   src: string;
   title?: string;
-  tittle?: string;
   sumber: string;
 }
 

@@ -14,7 +14,7 @@ export default function PanduanMenuBtn() {
         <TouchableOpacity
           onPress={() => {
             setActivePage(`${data.page}`);
-            Navigation.navigate("PanduanDetail" as never);
+            Navigation.navigate(`${data.page}` as never);
           }}
           key={idx}
           style={{

@@ -1,4 +1,4 @@
-import PanduanDetail from "../components/Panduan/PanduanDetail";
+import PanduanOne from "../pages/Panduan/PanduanOne";
 import PanduanThree from "../pages/Panduan/PanduanThree";
 import PanduanTwo from "../pages/Panduan/PanduanTwo";
 import Edukasi from "../pages/besti/Edukasi";
@@ -32,8 +32,8 @@ export const STACK_SCREEN = [
   },
 
   {
-    name: "PanduanDetail",
-    component: PanduanDetail,
+    name: "PanduanOne",
+    component: PanduanOne,
   },
   {
     name: "PanduanTwo",
