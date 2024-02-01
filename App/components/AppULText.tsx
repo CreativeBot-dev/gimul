@@ -12,14 +12,14 @@ export default function AppULText(props: IProps) {
   return (
     <View style={{ flexDirection: "row", alignItems: "flex-start", gap: 5 }}>
       <Octicons name="dot" size={20} color="black" />
-      <Text style={{ fontFamily: "Poppins-SemiBold", width: "20%" }}>
+      <Text style={{ fontFamily: "Poppins-SemiBold", width: "30%" }}>
         {title}
       </Text>
       <Text
         style={{
           fontFamily: "Poppins-Regular",
           flexWrap: "wrap",
-          width: "75%",
+          width: "65%",
           textAlign: "justify",
         }}
       >

@@ -19,6 +19,12 @@ export const APP_TABS = [
   {
     id: "Besti",
     component: Besti,
-    icon: <AntDesign name="calendar" size={30} color="black" />,
+    icon: (
+      <MaterialCommunityIcons
+        name="feature-search-outline"
+        size={27}
+        color="black"
+      />
+    ),
   },
 ];

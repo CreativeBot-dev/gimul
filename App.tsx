@@ -8,6 +8,7 @@ import NewUser from "./App/pages/NewUser";
 import Profile from "./App/pages/Profile";
 import { STACK_SCREEN } from "./App/constants/STACK_SCREEN";
 import { Ionicons } from "@expo/vector-icons";
+import WaterMark from "./App/components/waterMark";
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -43,7 +44,9 @@ export default function App() {
               name={data.name}
               component={data.component}
               options={{
+                title: "",
                 headerTitleStyle: { display: "none" },
+                headerTitle: "",
                 headerTransparent: true,
                 headerBackImage: () => (
                   <Ionicons name="arrow-back-outline" size={35} color="white" />
@@ -52,6 +55,7 @@ export default function App() {
             />
           ))}
         </Stack.Navigator>
+        <WaterMark />
       </NavigationContainer>
     </View>
   );

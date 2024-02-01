@@ -4021,6 +4021,13 @@ expo-font@~11.10.2:
   dependencies:
     fontfaceobserver "^2.1.0"
 
+expo-image@~1.10.5:
+  version "1.10.5"
+  resolved "https://registry.yarnpkg.com/expo-image/-/expo-image-1.10.5.tgz#3ed592ab1e30a3f2df94eafc47f66d4c3b18d577"
+  integrity sha512-IiqSU9FxpoNeSFbtVLHdLq9MIHtAUYI1hcNGXoj3fpNpPEUdjN41mPftLQPIszfWWBxgrjUu4trIVXuf/Ijy+w==
+  dependencies:
+    "@react-native/assets-registry" "~0.73.1"
+
 expo-keep-awake@~12.8.2:
   version "12.8.2"
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-12.8.2.tgz#6cfdf8ad02b5fa130f99d4a1eb98e459d5b4332e"
@@ -4049,6 +4056,11 @@ expo-modules-core@1.11.8:
   integrity sha512-rlctE3nCNLCGv3LosGQNaTuwGrr2SyQA+hOgci/0l+VRc0gFNtvl0gskph9C0tnN1jzBeb8rRZQYVj5ih1yxcA==
   dependencies:
     invariant "^2.2.4"
+
+expo-screen-orientation@~6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/expo-screen-orientation/-/expo-screen-orientation-6.4.1.tgz#1c4428a058921e48b5caa45367e626b8bec10e24"
+  integrity sha512-VM0C9ORNL1aT6Dr2OUeryzV519n0FjtXI2m+HlijOMi1QT2bPg4tBkCd7HLgywU4dZ1Esa46ewUudmk+fOqmMQ==
 
 expo-sqlite@~11.3.3:
   version "11.3.3"
@@ -5456,6 +5468,11 @@ loose-envify@^1.0.0, loose-envify@^1.1.0, loose-envify@^1.4.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+lottie-react-native@6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/lottie-react-native/-/lottie-react-native-6.5.1.tgz#7986078648d1ff274a704ae3bd979a4c3aa235c6"
+  integrity sha512-pjih71P6qX6Ax5ucUBA+YJO7+fnveI581Bd8LmYeARm3spq3AnoGzEkrWaieM8odnK6WI4d5dwEJsxge/QjFPw==
+
 lru-cache@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-5.1.1.tgz#1da27e6710271947695daf6848e847f01d84b920"
@@ -6656,6 +6673,11 @@ react-native-screens@~3.29.0:
   dependencies:
     react-freeze "^1.0.0"
     warn-once "^0.1.0"
+
+react-native-status-bar-height@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-status-bar-height/-/react-native-status-bar-height-2.6.0.tgz#b6afd25b6e3d533c43d0fcdcfd5cafd775592cea"
+  integrity sha512-z3SGLF0mHT+OlJDq7B7h/jXPjWcdBT3V14Le5L2PjntjjWM3+EJzq2BcXDwV+v67KFNJic5pgA26cCmseYek6w==
 
 react-native-swipe-gestures@^1.0.5:
   version "1.0.5"
