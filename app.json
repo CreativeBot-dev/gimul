@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "besti-gimul",
-    "slug": "besti-gimul",
+    "slug": "gimul",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -28,6 +28,12 @@
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "639accfc-d088-455f-9432-c52a462e95b5"
+      }
+    },
+    "owner": "mchrama"
   }
 }

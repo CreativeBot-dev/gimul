@@ -10,8 +10,6 @@ export default function Profile() {
   const [userName, setUserName] = useState("");
   const [isEdit, setIsEdit] = useState(false);
 
-  console.log(userName);
-
   function ChangeNamBtn() {
     setIsEdit(true);
   }
@@ -31,7 +29,6 @@ export default function Profile() {
     endColor: "#FBA1B7",
   };
 
-  console.log(userName);
   return (
     <GradientLayout
       gradientProps={gradientProps}
