@@ -6,10 +6,9 @@ import { usePanduanPage } from "../../hooks/zustand";
 
 export default function PanduanMenuBtn() {
   const Navigation = useNavigation();
-  const { activePage, setActivePage } = usePanduanPage();
-  console.log(activePage);
+  const { setActivePage } = usePanduanPage();
   return (
-    <View style={{ gap: 10 }}>
+    <View style={{ gap: 20, margin: 20 }}>
       {PANDUAN_MENU.map((data, idx) => (
         <TouchableOpacity
           onPress={() => {

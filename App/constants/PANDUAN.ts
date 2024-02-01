@@ -29,12 +29,12 @@ export const PANDUAN_PAGE: IPanduanPages = {
       cara: "Posisi bayi berada di pangkuan orang tua, salah satu tangan orang tua menyangga kepala bayi dan tangan lainnya membersihkan gigi dan mulut",
       video: [
         {
-          src: require("../../assets/video/panduan/video.mp4"),
+          src: require("../../assets/video/panduan/panduan1.mp4"),
           title: "Cara Membersihkan Gigi Bayi dengan Finger Brushes",
           sumber: "YouTube: Asahid Taehyung",
         },
         {
-          src: require("../../assets/video/panduan/video.mp4"),
+          src: require("../../assets/video/panduan/panduan2.mp4"),
           title:
             "Cara Membersihkan Gigi Bayi dengan Waslap dan Sikat Gigi Khusus Bayi",
           sumber: "YouTube: Yukito Mama",
@@ -55,12 +55,12 @@ export const PANDUAN_PAGE: IPanduanPages = {
       cara: "Kedua orang tua duduk berhadapan dengan lutut saling bersentuhan, anak berbaring di pangkuan orang tua, ayah memegang tangan dan kaki anak kemudian ibu membersihkan rongga mulut anak atau sebaliknya",
       video: [
         {
-          src: require("../../assets/video/panduan/video.mp4"),
+          src: require("../../assets/video/panduan/panduan3.mp4"),
           title: "Posisi Sikat Gigi Anak Usia 1-3 Tahun",
           sumber: "YouTube: Vancouver Coastal Health",
         },
         {
-          src: require("../../assets/video/panduan/video.mp4"),
+          src: require("../../assets/video/panduan/panduan4.mp4"),
           title: "Cara Sikat Gigi Anak Usia 1-3 Tahun",
           sumber: "YouTube: Vancouver Coastal Health",
         },
@@ -80,7 +80,7 @@ export const PANDUAN_PAGE: IPanduanPages = {
       cara: "Anak berdiri didepan orang tua dengan belakang kepala bersandar pada orang tua, kemudian tangan kiri ibu memeluk kepala anak dengan jari menarik pipi dan bibir, dan tangan kanan ibu menyikat gigi anak",
       video: [
         {
-          src: require("../../assets/video/panduan/video.mp4"),
+          src: require("../../assets/video/panduan/panduan5.mp4"),
           title: "Posisi Menyikat Gigi Anak Usia 3-6 Tahun",
           sumber: "YouTube: LNKTV Health",
         },

@@ -1,24 +1,13 @@
 export const VIDEO_EDUKASI = [
   {
-    title: "video Edukasi",
-    src: require("../../assets/video/panduan/video.mp4"),
-    sumber: "Tuangkan Pasta gigi pada sikat gigi sebesar biji jagung",
+    title: "Cara Bersihkan Gigi Bayi yang Baru Tumbuh",
+    src: require("../../assets/video/videoEdukasi/edukasi1.mp4"),
+    sumber: "Youtube : Gue Sehat",
   },
 
   {
-    title: "video Edukasi",
-    src: require("../../assets/video/panduan/video.mp4"),
-    sumber: "Tuangkan Pasta gigi pada sikat gigi sebesar biji jagung",
-  },
-  {
-    title: "video Edukasi",
-    src: require("../../assets/video/panduan/video.mp4"),
-    sumber: "Tuangkan Pasta gigi pada sikat gigi sebesar biji jagung",
-  },
-
-  {
-    title: "video Edukasi",
-    src: require("../../assets/video/panduan/video.mp4"),
-    sumber: "Tuangkan Pasta gigi pada sikat gigi sebesar biji jagung",
+    title: "Cara Merawat Gigi Bayi dan Balita",
+    src: require("../../assets/video/videoEdukasi/edukasi2.mp4"),
+    sumber: "Youtube : Alodokter",
   },
 ];

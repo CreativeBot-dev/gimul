@@ -47,7 +47,7 @@ export default function VideoPlayer(props: IVideoPlayer) {
         {title}
       </Text>
       <Video
-        style={{ height: 230, width: "100%", marginVertical: 5 }}
+        style={{ minHeight: 205 }}
         source={src}
         useNativeControls
         resizeMode={ResizeMode.CONTAIN}

@@ -1,6 +1,6 @@
 import { LinearGradient } from "expo-linear-gradient";
 import React, { ReactNode } from "react";
-import { StatusBar, View, ViewStyle } from "react-native";
+import { Platform, StatusBar, View, ViewStyle } from "react-native";
 
 interface gradientProps {
   startColor: string;
@@ -16,7 +16,8 @@ interface LayoutProps {
 
 const GradientLayout: React.FC<LayoutProps> = (props: LayoutProps) => {
   const { children, childStyle, motherStyle, gradientProps } = props;
-  const statusBarHeight = StatusBar.currentHeight || 0;
+  const statusBarHeight =
+    Platform.OS === "ios" ? 45 : StatusBar.currentHeight ?? 0;
 
   return (
     <LinearGradient
