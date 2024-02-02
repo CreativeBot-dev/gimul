@@ -1,5 +1,5 @@
 import { View, Text, TouchableOpacity } from "react-native";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useState } from "react";
 import { Calendar, LocaleConfig } from "react-native-calendars";
 import {
   dayNames,
@@ -13,16 +13,16 @@ import { getTodayString } from "../helpers/getTodayString";
 import { useReminderSikat } from "../hooks/zustand";
 
 LocaleConfig.locales["fr"] = {
-  monthNames: monthNames,
-  dayNames: dayNames,
-  dayNamesShort: dayNamesShort,
-  today: today,
+  monthNames,
+  dayNames,
+  dayNamesShort,
+  today,
 };
 
 LocaleConfig.defaultLocale = "fr";
 
 export default function AppCalendar() {
-  const db = SQLite.openDatabase("cermat.db");
+  const db = SQLite.openDatabase("gimul.db");
   const { setSikatGigi } = useReminderSikat();
   const DotStyle = {
     width: 30,
@@ -39,7 +39,6 @@ export default function AppCalendar() {
     duakali: true,
   });
   const sikatGigiSekaliBtn = () => {
-    // console.log("sikat gigi sekali");
     setSikatGigi(1);
     createReport();
   };
@@ -53,7 +52,7 @@ export default function AppCalendar() {
 
   function createReport() {
     const todayString = getTodayString();
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve: any, reject) => {
       db.transaction((tx) => {
         tx.executeSql(
           "INSERT INTO reports (created_at) VALUES (?)",
@@ -68,6 +67,7 @@ export default function AppCalendar() {
           },
           (_, error) => {
             reject(error);
+            return false;
           }
         );
       });
@@ -86,26 +86,27 @@ export default function AppCalendar() {
           },
           (tx, error) => {
             reject(error);
+            return false;
           }
         );
       });
     });
   }
 
-  const riwayatSikatGigiArray = [];
+  const riwayatSikatGigiArray: any[] = [];
 
-  dataSikatGigi.forEach((data) => {
+  dataSikatGigi.forEach((data: any) => {
     riwayatSikatGigiArray.push(
       Object.assign({
         [data.date]: {
-          marked: data.status === 0 ? false : true,
+          marked: data.status !== 0,
           dotColor: `${data.status === 1 ? "pink" : "#9BACF1"}`,
         },
       })
     );
   });
-  const riwayatSikatGigi = {};
-  riwayatSikatGigiArray.forEach((item) => {
+  const riwayatSikatGigi: any = {};
+  riwayatSikatGigiArray.forEach((item: any) => {
     for (const date in item) {
       if (item.hasOwnProperty(date)) {
         riwayatSikatGigi[date] = item[date];
@@ -116,11 +117,13 @@ export default function AppCalendar() {
   useFocusEffect(
     useCallback(() => {
       getReports()
-        .then((res) => {
+        .then((res: any) => {
           setdataSikatGigi(res);
           const todayString = getTodayString();
-          const dataNow = res.filter((value) => value.date == todayString);
-          if (dataNow.length > 0 && dataNow[0].status == 1) {
+          const dataNow = res.filter(
+            (value: any) => value.date === todayString
+          );
+          if (dataNow.length > 0 && dataNow[0].status === 1) {
             setIsDisable({ sekali: true, duakali: false });
           }
           if (dataNow.length > 0 && dataNow[0].status >= 2) {

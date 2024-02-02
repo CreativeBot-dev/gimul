@@ -4,5 +4,6 @@ module.exports = {
   rules: {
     "import/order": "off", // Disable the import/order rule
     "react/self-closing-comp": "off",
+    "prettier/prettier": "off",
   },
 };

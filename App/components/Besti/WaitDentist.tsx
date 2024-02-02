@@ -4,7 +4,20 @@ import FeatureHead from "../FeatureHead";
 import LottieView from "lottie-react-native";
 import waitDentist from "../../assets/waitDentist.json";
 
-export default function WaitDentist() {
+type TProps = {
+  waitingTime: string;
+};
+
+export default function WaitDentist(props: TProps) {
+  const { waitingTime } = props;
+  const year = new Date(waitingTime).getFullYear();
+  const month = new Date(waitingTime).toLocaleString("id-ID", {
+    month: "long",
+  });
+  // const month = new Date(waitingTime).getMonth() + 1;
+  const day = new Date(waitingTime).getDate();
+
+  const customWaitingTime = `${day.toString().length === 1 ? "0" + day : day} ${month} ${year}`;
   return (
     <View
       style={{
@@ -33,7 +46,7 @@ export default function WaitDentist() {
       </Text>
 
       <FeatureHead
-        name="2 Juli 2024"
+        name={customWaitingTime}
         textStyle={{
           color: "black",
           fontFamily: "Poppins-Bold",
