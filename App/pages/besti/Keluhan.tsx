@@ -10,7 +10,6 @@ import { Linking } from "react-native";
 export default function Keluhan() {
   const [message, setMessage] = useState("");
   const noWhatsApp: string = "81234952273";
-  console.log(message);
   function messageText(value: string) {
     setMessage(value);
   }

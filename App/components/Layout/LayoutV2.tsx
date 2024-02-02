@@ -1,6 +1,6 @@
 // Layout.tsx
 import React, { ReactNode } from "react";
-import { StatusBar, View, ViewStyle } from "react-native";
+import { Platform, StatusBar, View, ViewStyle } from "react-native";
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,7 +10,8 @@ interface LayoutProps {
 
 const LayoutV2: React.FC<LayoutProps> = (props: LayoutProps) => {
   const { children, childStyle, motherStyle } = props;
-  const statusBarHeight = StatusBar.currentHeight || 0;
+  const statusBarHeight =
+    Platform.OS === "ios" ? 45 : StatusBar.currentHeight ?? 0;
 
   return (
     <View style={[{ height: "100%" }, motherStyle]}>

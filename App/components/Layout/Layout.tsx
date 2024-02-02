@@ -1,6 +1,6 @@
 // Layout.tsx
 import React, { ReactNode } from "react";
-import { StatusBar, View, ViewStyle } from "react-native";
+import { Platform, StatusBar, View, ViewStyle } from "react-native";
 
 interface LayoutProps {
   children: ReactNode;
@@ -10,11 +10,11 @@ interface LayoutProps {
 
 const Layout: React.FC<LayoutProps> = (props: LayoutProps) => {
   const { children, childStyle, motherStyle } = props;
-  const statusBarHeight = StatusBar.currentHeight || 0;
-
+  const statusBarHeight =
+    Platform.OS === "ios" ? 45 : StatusBar.currentHeight ?? 0;
   return (
     <View style={[{ height: "100%", paddingHorizontal: 20 }, motherStyle]}>
-      <View style={[{ paddingTop: statusBarHeight + 5 }, childStyle]}>
+      <View style={[{ marginTop: statusBarHeight + 5 }, childStyle]}>
         {children}
       </View>
     </View>

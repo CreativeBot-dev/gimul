@@ -1,9 +1,11 @@
-import { Keyboard, Text, View } from "react-native";
+import { Keyboard, KeyboardAvoidingView, Text, View } from "react-native";
 import React, { useState } from "react";
 import { useUser } from "../hooks/zustand";
 import AppTextInput from "../components/AppTextInput";
 import GradientLayout from "../components/Layout/GradientLayout";
 import AppButton from "../components/AppButton";
+import LottieView from "lottie-react-native";
+import profile from "../assets/profile.json";
 
 export default function Profile() {
   const { user, setUser } = useUser();
@@ -31,13 +33,18 @@ export default function Profile() {
 
   return (
     <GradientLayout
+      motherStyle={{ flex: 1 }}
       gradientProps={gradientProps}
       childStyle={{
-        flex: 1,
         justifyContent: "center",
         alignItems: "center",
       }}
     >
+      <LottieView
+        autoPlay
+        source={profile}
+        style={{ height: 250, width: 250 }}
+      />
       <View
         style={{
           backgroundColor: "white",
@@ -49,7 +56,8 @@ export default function Profile() {
           alignItems: "center",
         }}
       >
-        <View
+        <KeyboardAvoidingView
+          behavior="position"
           style={{
             justifyContent: "space-around",
             height: "100%",
@@ -64,7 +72,7 @@ export default function Profile() {
             onPress={ChangeNamBtn}
             BtnStyle={{ paddingHorizontal: 40, backgroundColor: "#FFD1DA" }}
           />
-        </View>
+        </KeyboardAvoidingView>
         <AppTextInput
           tittle="Masukkan Nama :"
           placeholder="Masukkan Nama"

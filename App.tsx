@@ -11,6 +11,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { useEffect, useState } from "react";
 import * as SQLite from "expo-sqlite";
 import { useUser } from "./App/hooks/zustand";
+import WaterMark from "./App/components/waterMark";
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -284,7 +285,9 @@ export default function App() {
               name={data.name}
               component={data.component}
               options={{
+                title: "",
                 headerTitleStyle: { display: "none" },
+                headerTitle: "",
                 headerTransparent: true,
                 headerBackImage: () => (
                   <Ionicons name="arrow-back-outline" size={35} color="white" />
@@ -293,6 +296,7 @@ export default function App() {
             />
           ))}
         </Stack.Navigator>
+        <WaterMark />
       </NavigationContainer>
     </View>
   );
