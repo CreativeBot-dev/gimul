@@ -297,7 +297,7 @@ export default function App() {
             />
           ))}
         </Stack.Navigator>
-        <WaterMark />
+        {/* <WaterMark /> */}
       </NavigationContainer>
     </View>
   );
