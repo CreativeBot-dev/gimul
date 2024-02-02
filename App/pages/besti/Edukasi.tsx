@@ -10,7 +10,7 @@ export default function Edukasi() {
       <FeatureHead name="Edukasi" />
       <AppScrollView style={{ marginTop: 20, padding: 15 }}>
         <Image
-          source={require("../../../assets/image/Edukasi/og.png")}
+          source={require("../../../assets/image/Edukasi/og.jpg")}
           style={{
             minHeight: 1000,
             borderRadius: 50,
