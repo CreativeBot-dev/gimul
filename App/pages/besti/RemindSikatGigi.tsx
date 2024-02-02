@@ -117,7 +117,7 @@ export default function RemindSikatGigi() {
       Object.assign({
         [data.date]: {
           marked: data.status !== 0,
-          dotColor: `${data.status === 1 ? "pink" : "#9BACF1"}`,
+          dotColor: `${data.status === 1 ? "#FFF0F5" : "#FBA1B7"}`,
         },
       })
     );
@@ -325,7 +325,7 @@ export default function RemindSikatGigi() {
                 fontFamily: "Poppins-SemiBold",
                 paddingLeft: 20,
                 fontSize: 25,
-                color: "#9BACF1",
+                color: "#FBA1B7",
               }}
             >
               Riwayat Sikat Gigi
@@ -363,7 +363,7 @@ export default function RemindSikatGigi() {
                 style={{
                   height: 14,
                   width: 14,
-                  backgroundColor: "pink",
+                  backgroundColor: "#FFF0F5",
                   borderRadius: 7,
                 }}
               ></View>
@@ -381,7 +381,7 @@ export default function RemindSikatGigi() {
                 style={{
                   height: 14,
                   width: 14,
-                  backgroundColor: "#9BACF1",
+                  backgroundColor: "#FBA1B7",
                   borderRadius: 7,
                 }}
               ></View>
@@ -401,7 +401,7 @@ export default function RemindSikatGigi() {
               disabled={isDisable.sekali}
               onPress={sikatGigiSekaliBtn}
               style={{
-                backgroundColor: "pink",
+                backgroundColor: "#FFF0F5",
                 // width: "100%",
                 paddingHorizontal: 10,
                 maxWidth: 200,
@@ -411,7 +411,7 @@ export default function RemindSikatGigi() {
                 borderRadius: 10,
               }}
             >
-              <Text style={{ fontFamily: "Poppins-SemiBold", color: "white" }}>
+              <Text style={{ fontFamily: "Poppins-SemiBold", color: "black" }}>
                 Sikat Gigi Sekali
               </Text>
             </TouchableOpacity>
@@ -420,7 +420,7 @@ export default function RemindSikatGigi() {
               disabled={isDisable.duakali}
               onPress={sikatGigiDuaKaliBtn}
               style={{
-                backgroundColor: "#9BACF1",
+                backgroundColor: "#FBA1B7",
                 // width: "100%",
                 paddingHorizontal: 10,
                 maxWidth: 200,
@@ -433,7 +433,7 @@ export default function RemindSikatGigi() {
               <Text
                 style={{
                   fontFamily: "Poppins-SemiBold",
-                  color: "white",
+                  color: "black",
                 }}
               >
                 Sikat Gigi Dua Kali

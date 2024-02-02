@@ -60,7 +60,7 @@ export default function BestiMenuBtn(props: IProps) {
             {data.title}
           </Text>
         </View>
-        <View style={{ justifyContent: "center", left: 10 }}>
+        <View style={{ justifyContent: "center", marginHorizontal: 10 }}>
           <Text style={{ fontFamily: "Poppins-Medium", color: "black" }}>
             {data.desc}
           </Text>

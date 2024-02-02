@@ -100,6 +100,7 @@ export default function RemindDokterGigi() {
           (_, { rows }) => {
             const scheduleRows: any = rows._array;
             if (scheduleRows.length > 0) {
+              console.log(scheduleRows);
               setScheduleTime({
                 id: scheduleRows[0].id,
                 date: scheduleRows[0].date,
@@ -187,6 +188,7 @@ export default function RemindDokterGigi() {
   useFocusEffect(
     useCallback(() => {
       getSchedules();
+      editSchedule({ id: 1, date: "2024-02-02" });
     }, [])
   );
   return (

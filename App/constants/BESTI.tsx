@@ -5,6 +5,14 @@ import {
   AntDesign,
 } from "@expo/vector-icons";
 
+// interface IBestiMenu {
+//   title: string;
+//   icon: ReactNode;
+//   desc: string;
+//   page: string;
+//   pageText: string;
+// }
+
 export const BESTI_MENU = [
   {
     title: "Edukasi",
@@ -15,7 +23,7 @@ export const BESTI_MENU = [
         color="#FBA1B7"
       />
     ),
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, alias?",
+    desc: "Cegah risiko kejadian stunting dimulai dari gigi, yuk!",
     page: "Edukasi",
     pageText: "Lihat semua",
   },
@@ -24,7 +32,7 @@ export const BESTI_MENU = [
     title: "Video Edukasi",
     icon: <Entypo name="folder-video" size={25} color="#FBA1B7" />,
 
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, alias?",
+    desc: "Kenali cara bersihkan gigi bayi yang baru tumbuh serta cara merawat gigi bayi dan balita!",
     page: "VideoEdukasi",
     pageText: "Lihat semua",
   },
@@ -37,22 +45,22 @@ export const BESTI_MENU = [
         color="#FBA1B7"
       />
     ),
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, alias?",
+    desc: "Sudahkah anak Anda sikat gigi 2 kali sehari? Yuk, pasang alarm agar selalu ingat! :)",
     page: "RemindSikatGigi",
     pageText: "Lihat semua",
   },
   {
     title: "Reminder Dokter Gigi",
     icon: <FontAwesome6 name="user-doctor" size={24} color="#FBA1B7" />,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, alias?",
+    desc: "Jangan lupa periksa ke dokter gigi 6 bulan sekali, ya! Yuk, pasang alarm agar selalu ingat! :)",
     page: "RemindDokterGigi",
-    pageText: "Lihat semua",
+    pageText: "",
   },
 
   {
     title: "Teledentistry",
     icon: <AntDesign name="customerservice" size={24} color="#FBA1B7" />,
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, alias?",
+    desc: "Anda atau anak Anda punya keluhan gigi? Yuk, konsultasikan ke dokter gigi!",
     page: "Keluhan",
     pageText: "Lihat semua",
   },

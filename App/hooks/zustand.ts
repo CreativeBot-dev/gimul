@@ -30,6 +30,15 @@ export const useDentist = create<IDentist>((set) => ({
   setDentist: (setToDentist: boolean) => set({ Dentist: setToDentist }),
 }));
 
+export interface ISchedule {
+  Schedule: string;
+  setSchedule: (setScheduleDate: string) => void;
+}
+
+export const useSchedule = create<ISchedule>((set) => ({
+  Schedule: "",
+  setSchedule: (setScheduleDate: string) => set({ Schedule: setScheduleDate }),
+}));
 interface IPanduanPage {
   activePage: string;
   setActivePage: (setActive: string) => void;

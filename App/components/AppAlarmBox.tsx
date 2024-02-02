@@ -100,7 +100,7 @@ export default function AppAlarmBox(props: TProps) {
     <View
       style={{
         marginTop: 20,
-        backgroundColor: "#e1e4f0",
+        backgroundColor: "#FFF0F5",
         height: "auto",
         padding: 10,
         borderRadius: 15,
@@ -123,6 +123,8 @@ export default function AppAlarmBox(props: TProps) {
       <View
         style={{
           justifyContent: "center",
+          paddingVertical: 5,
+          gap: 5,
         }}
       >
         <Text style={{ fontFamily: "Poppins-SemiBold", fontSize: 18 }}>
@@ -132,7 +134,7 @@ export default function AppAlarmBox(props: TProps) {
           style={{
             fontSize: 40,
             fontFamily: "Poppins-Bold",
-            color: "#9BACF1",
+            color: "#FBA1B7",
             marginBottom: -15,
             marginTop: -10,
           }}
@@ -148,7 +150,7 @@ export default function AppAlarmBox(props: TProps) {
       <TouchableOpacity
         onPress={showTimepicker}
         style={{
-          backgroundColor: "#9BACF1",
+          backgroundColor: "#FBA1B7",
           paddingHorizontal: 20,
           borderRadius: 10,
         }}
