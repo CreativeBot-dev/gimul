@@ -1,29 +1,41 @@
-import { View, Text } from "react-native";
+import { View, Text, TextStyle } from "react-native";
 import React from "react";
-import { Octicons } from "@expo/vector-icons";
 
 interface IProps {
   title?: string;
   data?: string;
+  titleStyle?: TextStyle;
 }
 
 export default function AppULText(props: IProps) {
-  const { title, data } = props;
+  const { title, data, titleStyle } = props;
   return (
-    <View style={{ flexDirection: "row", alignItems: "flex-start", gap: 5 }}>
-      <Octicons name="dot" size={20} color="black" />
-      <Text style={{ fontFamily: "Poppins-SemiBold", width: "30%" }}>
-        {title}
-      </Text>
+    <View style={{ alignItems: "flex-start", gap: 5 }}>
+      <View style={{ flexDirection: "row" }}>
+        {/* <Octicons name="dot" size={20} color="black" /> */}
+        <Text
+          style={
+            titleStyle !== undefined
+              ? [titleStyle]
+              : { fontFamily: "Poppins-SemiBold", width: "30%" }
+          }
+        >
+          {title}
+        </Text>
+      </View>
       <Text
-        style={{
-          fontFamily: "Poppins-Regular",
-          flexWrap: "wrap",
-          width: "65%",
-          textAlign: "justify",
-        }}
+        style={
+          data !== undefined
+            ? {
+                fontFamily: "Poppins-Regular",
+                flexWrap: "wrap",
+                width: "90%",
+                textAlign: "justify",
+              }
+            : { display: "none" }
+        }
       >
-        : {data}
+        {data}
       </Text>
     </View>
   );

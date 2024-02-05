@@ -13,14 +13,55 @@ export default function Content(props: IContent) {
   const { data } = props;
 
   return (
-    <View style={{ gap: 10 }}>
-      <AppULText title="Pelaksana" data={data.pelaksana} />
-      <AppULText title="Waktu" data={data.waktu} />
-      <AppULText title="Alat" />
-      {Object.values(data.alat).map((alat, idx) => (
-        <AppLIText key={idx} data={alat} />
-      ))}
-      <AppULText title="Cara" data={data.cara} />
+    <View style={{ gap: 30 }}>
+      <AppULText
+        title="Pelaksana"
+        titleStyle={{
+          padding: 3,
+          paddingHorizontal: 10,
+          backgroundColor: "#FBA1B7",
+          borderRadius: 5,
+          fontWeight: "bold",
+        }}
+        data={data.pelaksana}
+      />
+      <AppULText
+        titleStyle={{
+          padding: 3,
+          paddingHorizontal: 10,
+          backgroundColor: "#FBA1B7",
+          borderRadius: 5,
+          fontWeight: "bold",
+        }}
+        title="Waktu"
+        data={data.waktu}
+      />
+      <View>
+        <AppULText
+          titleStyle={{
+            padding: 3,
+            paddingHorizontal: 10,
+            backgroundColor: "#FBA1B7",
+            borderRadius: 5,
+            fontWeight: "bold",
+          }}
+          title="Alat"
+        />
+        {Object.values(data.alat).map((alat, idx) => (
+          <AppLIText key={idx} data={alat} />
+        ))}
+      </View>
+      <AppULText
+        titleStyle={{
+          padding: 3,
+          paddingHorizontal: 10,
+          backgroundColor: "#FBA1B7",
+          borderRadius: 5,
+          fontWeight: "bold",
+        }}
+        title="Cara"
+        data={data.cara}
+      />
       {data.video.map((video, idx) => (
         <StepPlayer
           key={idx}
