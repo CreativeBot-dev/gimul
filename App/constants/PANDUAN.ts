@@ -46,7 +46,7 @@ export const PANDUAN_PAGE: IPanduanPages = {
   PageTwo: [
     {
       name: "Usia 1 - 3 Tahun",
-      pelaksana: "Dibantu Orang Tua 2",
+      pelaksana: "Dibantu Orang Tua",
       waktu: "2x Sehari (pagi dan malam)",
       alat: {
         1: "Sikat Gigi Anak",
@@ -71,7 +71,7 @@ export const PANDUAN_PAGE: IPanduanPages = {
   PageThree: [
     {
       name: "Usia 3 - 6 Tahun",
-      pelaksana: "Dibantu Orang Tua 3",
+      pelaksana: "Dibantu Orang Tua",
       waktu: "2x Sehari (pagi dan malam)",
       alat: {
         1: "Sikat Gigi Anak",
